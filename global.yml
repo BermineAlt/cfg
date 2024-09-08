@@ -1,0 +1,95 @@
+
+# Mongo Database Details
+mongo:
+  uri-mode: false
+  mongo-uri: ''
+  address: "127.0.0.1"
+  port: 20989
+  database: "phoenix"
+  authentication: false
+  username: "admin"
+  password: "password"
+
+# Redis Database Details
+redis:
+  address: "127.0.0.1"
+  port: 20758
+  password: ''
+
+# Network settings
+network:
+  ip: "mc.yournetwork.com"
+  website: "www.yournetwork.com"
+  store: "store.yournetwork.com"
+  discord: "discord.yournetwork.com"
+  teamspeak: "ts3.yournetwork.com"
+  twitter: "N/A"
+  # Acceptable inputs: &a, &c, &b&o, &2&l... etc
+  colors:
+    main: "&6"
+    secondary: "&e"
+    middle: "&7"
+
+server:
+  # This should be the same name you put in your bungeecord config.yml
+  name: "server"
+  displayname: "Server"
+  group: "Minigames"
+  region: "EU"
+  date-format: "dd/MM/yyyy hh:mm:ss a"
+  # If a player with the rank Admin that has the child mod will inherit mod perms. If the mod rank has the child Trial-Mod
+  # and the passthrough is on admin will get both trial and mod perms.
+  passthrough-children: false
+  # Should this servers player count and max player count towards the total?
+  count-players: true
+  console-name: "&4&lConsole"
+  # Should the '*' permission be enabled?
+  star-perm-enabled: true
+  # Should the alts system be enabled?
+  alts-enabled: true
+  # Only show alts that have the same ip at the same time.
+  only-current-ip-alts: true
+  chatlogs:
+    # Number of days to keep chat logs in the database
+    days-keep: 30
+    # Should we delete older chatlogs than the number of days above on startup?
+    delete-on-startup: true
+
+security:
+  enabled: true
+  # If a user gets a rank in this list and they aren't security verified they'll be punished
+  ranks-to-trigger: 
+    - "Owner"
+    - "Admin"
+    - "Developer"
+  # Should a user who gets opped be punished if they aren't security verified
+  op-trigger: true
+  # Should security users be automatically opped?
+  auto-op: false
+  # Should the user that opped or gave someone a rank be punished if the person they gave it to isn't security verified
+  punish-sender: true
+
+filter:
+  enabled: true
+  # Should links be part of the hard filter?
+  links-hard: false
+  # Send the filtered message to the sender only
+  ghost-mode: false
+  # Send the sender a message that their message got filtered
+  alert-filter: true
+  whitelisted-links: 
+    - "yournetwork.com"
+
+# Whitelist Settings
+whitelist:
+  # If enabled the whitelist will be using names instead of uuid's.
+  # Please clear your whitelist list before changing this option!
+  # This will be same as UUID but instead of UUID it will be getting lowerCaseName
+  name-based: true
+  enabled: false
+  access-rank: "Developer"
+  # DO NOT EDIT!
+  access-types: 
+    - "UUID"
+    - "RANK"
+  players: []
